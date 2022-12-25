@@ -76,34 +76,6 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // let username = e.target[0].value;
-    // if (username.length < 3) {
-    //   setUsernameError(true);
-    // } else {
-    //   setUsernameError(false);
-    // }
-    // let email = e.target[1].value;
-    // if (!email.match(emailRegex)) {
-    //   setEmailError(true);
-    // } else {
-    //   setEmailError(false);
-    // }
-
-    // let contact_no = e.target[2].value;
-    // if (!contact_no.match(contactRegex)) {
-    //   setContactError(true);
-    // } else {
-    //   setContactError(false);
-    // }
-
-    // let password = e.target[3].value;
-    // if (!password.match(passwordRegex)) {
-    //   setPasswordError(true);
-    // } else {
-    //   setPasswordError(false);
-    // }
-
     const data = {
       username: username,
       contact_no: contact_no,
@@ -150,34 +122,31 @@ const Register = () => {
     <>
       <div className="register-container" data-test="register">
         <div className="register">
-          <div className="register__image">
+          {/* <div className="register__image">
             <img
               src={register_image}
               alt="register_image"
               className="register__image--img"
             />
-          </div>
+          </div> */}
           <div className="register__form">
-            <h2 className="register__heading">Sign Up to Rent N' Read</h2>
-            <h4 className="register__sub-heading">
-              Already a member{" "}
-              <Link to="/login" className="login-link">
-                Sign In
-              </Link>{" "}
-            </h4>
+            <h2 className="register__heading">Create Account</h2>
+
             <form onSubmit={handleSubmit}>
               <div className="register__input">
-                <FaUserAlt size={20} className="register__input--icon" />
+                <h3 for="exampleInputPassword1" className="feildheading1">
+                  Username
+                </h3>
+                <FaUserAlt size={20} className="register__input--icon1" />
                 <input
                   required="true"
                   type="text"
-                  placeholder="Username"
+                  placeholder="Enter username"
                   // value={username}
                   onChange={handleUsername}
                   // onChange={(e) => {
                   //   setUsername(e.target.value);
                   // }}
-                  data-test="username"
                 />
                 {usernameError ? (
                   <span>
@@ -190,11 +159,14 @@ const Register = () => {
               </div>
 
               <div className="register__input">
-                <MdEmail size={20} className="register__input--icon" />
+                <h3 for="exampleInputPassword1" className="feildheading1">
+                  Email Address
+                </h3>
+                <MdEmail size={27} className="register__input--icon1" />
                 <input
                   required
                   type="email"
-                  placeholder="Email address"
+                  placeholder="Enter email address"
                   // value={email}
                   onChange={handleEmail}
                   // onChange={(e) => {
@@ -206,23 +178,28 @@ const Register = () => {
               </div>
 
               <div className="register__input">
-                <FaPhone size={20} className="register__input--icon" />
+                <h3 for="exampleInputPassword1" className="feildheading1">
+                  Phone Number
+                </h3>
+                <FaPhone size={20} className="register__input--icon1" />
                 <input
                   required
                   type="number"
-                  placeholder="Contact No."
+                  placeholder="Enter phone number"
                   // value={contact_no}
                   onChange={handleContact}
                   // onChange={(e) => {
                   //   setContactNo(e.target.value);
                   // }}
-                  data-test="contactno"
                 />
                 {contactError ? <span>Enter valid Contact number</span> : ""}
               </div>
 
               <div className="register__input">
-                <ImKey size={20} className="register__input--icon" />
+                <h3 for="exampleInputPassword1" className="feildheading1">
+                  Password
+                </h3>
+                <ImKey size={20} className="register__input--icon1" />
                 <input
                   required
                   type="password"
@@ -243,23 +220,21 @@ const Register = () => {
                   ""
                 )}
               </div>
-
               <button
                 type="submit"
                 className="register__btn"
                 onClick={handleSubmit}
                 data-test="register-btn"
               >
-                Create an account
+                Submit
               </button>
+              <h4 className="register__sub-heading">
+                Already registered into Thrift It?{" "}
+                <Link to="/login" className="login-link">
+                  Login
+                </Link>{" "}
+              </h4>
             </form>
-            <button type="submit" className="register__google">
-              <AiFillGoogleCircle
-                className="register__google--icon"
-                size={30}
-              />
-              Sign up with google
-            </button>
           </div>
         </div>
       </div>

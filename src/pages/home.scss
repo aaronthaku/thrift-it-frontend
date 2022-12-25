@@ -67,7 +67,7 @@
   
   .hero {
     min-height: 80vh;
-    background: url("../assets/home-background.svg");
+    // background: url("../assets/thritit-logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     padding: 10px;
@@ -123,6 +123,10 @@
   
   .listedBook-container {
     margin: 100px 10%;
+  }
+
+  .carousel-item img {
+    object-fit: cover;
   }
   
   .heading2 {

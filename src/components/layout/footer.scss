@@ -1,107 +1,23 @@
-.footer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 60px;
-    color: #fff;
-    background-color: #414141;
-    position: relative;
-    @media (max-width: 400px) {
-      flex-direction: column;
-      text-align: justify;
-      padding: 20px;
-      padding-bottom: 50px;
-    }
-    & > :not(:last-child) {
-      margin-bottom: 20px;
-    }
-  
-    &__copyright {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      font-size: 14px;
-    }
+.footer{
+  height: 40px;
+  padding: 50px 0px 70px 0px;
+  color: #f2f2f2;
+  background-color: rgb(49, 47, 47);
+  text-align: center;
+  font-size:large;
+  font-weight:380;
+  position: relative;
+  @media (max-width: 400px) {
+    flex-direction: column;
+    text-align: justify;
+    padding: 20px;
+    padding-bottom: 50px;
   }
-  
-  .footer-about {
-    max-width: 300px;
-    min-width: 150px;
-    &__text {
-      margin-top: 20px;
-    }
+  & > :not(:last-child) {
+    margin-bottom: 20px;
   }
+}
   
-  .footer-links {
-    &__title {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-    &__items {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    &__item {
-      text-decoration: none;
-      color: #fff;
-      margin-bottom: 10px;
-      &:hover {
-        color: #ff6363;
-        transition: all 0.3s;
-      }
-    }
-  }
   
-  .newsletter {
-    max-width: 300px;
-    min-width: 150px;
-    & > *:not(:last-child) {
-      margin-bottom: 20px;
-    }
-    &__title {
-      font-size: 20px;
-      font-weight: 700;
-    }
-    &__contact {
-      font-size: 14px;
-    }
-    &__socials {
-      display: flex;
-      & > *:not(:last-child) {
-        margin-right: 10px;
-      }
-      svg {
-        font-size: 25px;
-      }
-    }
-    &__email {
-      position: relative;
   
-      &--icon {
-        position: absolute;
-        color: rgb(109, 108, 108);
-        top: 10px;
-        left: 10px;
-      }
-      input {
-        width: 100%;
-        padding: 10px 10px 10px 40px;
-        border-radius: 8px;
-        font-size: 16px;
-  
-        border: 3px solid #000;
-        outline: none;
-        &:focus,
-        &:active {
-          border: 3px solid #ff6363;
-          transition: all 0.3s;
-        }
-      }
-    }
-  }
   

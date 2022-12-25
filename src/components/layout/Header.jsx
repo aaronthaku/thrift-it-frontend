@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/thritit-logo.png";
 import "./header.scss";
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -17,7 +17,13 @@ const Header = () => {
     <div className="header">
       <Link to="/">
         <div className="header__logo">
-          <img src={logo} alt="logo" className="header__logo--img" />
+          <img
+            src={logo}
+            alt="logo"
+            // width="200"
+            // height="150"
+            className="header__logo--img"
+          />
         </div>
       </Link>
       <div
@@ -33,8 +39,9 @@ const Header = () => {
           Home
         </Link>
         <Link className="nav__links" to="/books">
-          Books
+          Products
         </Link>
+        <Link className="nav__links">Cart</Link>
         <Link className="nav__links">About</Link>
         {localStorage.getItem("token") ? (
           <Link className="nav__btn nav__links" to="login" onClick={logout}>

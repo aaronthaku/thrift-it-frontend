@@ -1,63 +1,48 @@
 .register-container {
-    padding: 10px;
+    padding: 5px;
   }
   
   .register {
-    max-width: 1000px;
-    margin: 77px auto;
+    background-color: rgb(198, 212, 182);
+    max-width: 561px;
+    margin: 70px auto;
     box-shadow: -1px 1px 15px rgba(0, 0, 0, 0.25);
     border-radius: 29px;
+    padding: 70px 70px;
     display: flex;
-    @media (max-width: 740px) {
-      max-width: 420px;
+    // @media (max-width: 740px) {
+    //   max-width: 420px;
+    // }
+    @media (max-width: 578px) {
+      margin: 77px 10px;
     }
-  
-    span{
-      color: red;
+    @media (max-width: 940px) {
+      padding: 28px 40px;
     }
-    
-    &__image {
-      width: 490px;
-      background-color: #fafafa;
-      padding: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &--img {
-        width: 500px;
-        @media (max-width: 940px) {
-          width: 300px;
-        }
-      }
-      @media (max-width: 740px) {
-        display: none;
-      }
+    @media (max-width: 420px) {
+      padding: 20px 15px;
     }
     &__heading {
-      font-weight: 800;
-      font-size: 30px;
-      margin-bottom: 15px;
+      font-weight: 500;
+      font-size: 35px;
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 25px;
       @media (max-width: 940px) {
         font-size: 24px;
       }
-    }
+    } 
     &__sub-heading {
-      font-weight: 600;
-      font-size: 18px;
-      margin-bottom: 30px;
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 5px;
       @media (max-width: 940px) {
         font-size: 14px;
       }
     }
     &__form {
-      padding: 36px 50px;
+      // padding: 36px 50px;
       width: 100%;
-      @media (max-width: 940px) {
-        padding: 28px 40px;
-      }
-      @media (max-width: 420px) {
-        padding: 20px 15px;
-      }
     }
     &__input {
       position: relative;
@@ -67,44 +52,49 @@
       input {
         outline: none;
         width: 100%;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 18px;
-        border: 2px solid #d3d3d3;
+        border: 2px solid #add197;
         border-radius: 12px;
         padding: 12px 40px 12px 12px;
         transition: all 0.3s;
         &::placeholder {
-          color: #b3b3b3;
+          color: #ccd4c4;
+          font-size: 14px;
         }
         &:active,
         &:focus {
-          border-color: #ff6363;
+          border-color: #097803;
         }
         @media (max-width: 940px) {
           font-size: 16px;
         }
       }
-      &--icon {
+      &--icon1 {
         color: #c2bdbd;
         position: absolute;
-        top: 13px;
-        right: 10px;
+        top: 40px;
+        right: 30px;
       }
     }
     &__btn {
       width: 100%;
       padding: 15px;
+      margin-top: 10px;
       margin-bottom: 20px;
       font-weight: 600;
-      font-size: 21px;
-      background: #ff6363;
+      font-size: 20px;
+      background: #21631e;
       border-radius: 12px;
       color: #fff;
       border: none;
       transition: all 0.3s;
       cursor: pointer;
       &:hover {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: #023b13;
+        transform: translateY(-2px);
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+          rgba(0, 0, 0, 0.05) 0px 5px 10px;
       }
       @media (max-width: 940px) {
         font-size: 18px;
@@ -140,12 +130,23 @@
   }
   
   .login-link {
+    font-weight: 600;
     text-decoration: none;
-    color: #ff6363;
-  
+    color: #025c08;
+
     &:hover {
       text-decoration: underline;
     }
   }
-  
+
+  .feildheading1{
+    font-weight: 350;
+    font-size: 16px;
+    color: #213901;
+  }
+    
+  span{
+    font-size: small;
+    color: red;
+  }
   

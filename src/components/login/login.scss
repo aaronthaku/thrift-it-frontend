@@ -1,19 +1,21 @@
 .login-container {
-    position: relative;
-    height: 90vh;
-    background: url("../../assets/background.svg");
-    background-size: cover;
-    @media (max-width: 578px) {
-      background: none;
-    }
+    // position: relative;
+    // height: 90vh;
+    // // background: url("../../assets/background.svg");
+    // background-size: cover;
+    // @media (max-width: 578px) {
+    //   background: none;
+    // }
+    padding: 10px;
   }
   
   label{
     color: red;
+    font-size: small;
   }
-  
+ 
   .login {
-    background-color: #fff;
+    background-color: rgb(198, 212, 182);
     max-width: 561px;
     margin: 77px auto;
     box-shadow: -1px 1px 15px rgba(0, 0, 0, 0.25);
@@ -29,44 +31,46 @@
       padding: 20px 15px;
     }
     &__heading {
-      font-weight: 800;
-      font-size: 30px;
-      margin-bottom: 15px;
+      font-weight: 500;
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 25px;
       @media (max-width: 940px) {
         font-size: 24px;
       }
     }
-    &__sub-heading {
-      font-weight: 600;
-      font-size: 18px;
-      margin-bottom: 30px;
-      @media (max-width: 940px) {
-        font-size: 14px;
-      }
-    }
+    // &__sub-heading {
+    //   font-weight: 500;
+    //   font-size: 18px;
+    //   margin-bottom: 30px;
+    //   @media (max-width: 940px) {
+    //     font-size: 14px;
+    //   }
+    // }
     &__form {
       width: 100%;
     }
     &__input {
       position: relative;
       &:not(:last-child) {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
       }
       input {
         outline: none;
         width: 100%;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 18px;
-        border: 2px solid #d3d3d3;
+        border: 2px solid #add197;
         border-radius: 12px;
         padding: 12px 40px 12px 12px;
         transition: all 0.3s;
         &::placeholder {
-          color: #b3b3b3;
+          color: #ccd4c4;
+          font-size: 14px;
         }
         &:active,
         &:focus {
-          border-color: #ff6363;
+          border-color: #097803;
         }
         @media (max-width: 940px) {
           font-size: 16px;
@@ -75,8 +79,8 @@
       &--icon {
         color: #c2bdbd;
         position: absolute;
-        top: 13px;
-        right: 10px;
+        top: 45px;
+        right: 30px;
       }
     }
     &__btn {
@@ -84,15 +88,18 @@
       padding: 15px;
       margin-bottom: 20px;
       font-weight: 600;
-      font-size: 21px;
-      background: #ff6363;
+      font-size: 20px;
+      background: #21631e;
       border-radius: 12px;
       color: #fff;
       border: none;
       transition: all 0.3s;
       cursor: pointer;
       &:hover {
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background: #023b13;
+        transform: translateY(-2px);
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+          rgba(0, 0, 0, 0.05) 0px 5px 10px;
       }
       @media (max-width: 940px) {
         font-size: 18px;
@@ -117,22 +124,29 @@
       cursor: pointer;
       &:hover,
       &:focus {
-        color: #ff6363;
-        border-color: #ff6363;
+        color: #2b9a1c;
+        border-color: #2b9a1c;
       }
       svg {
-        color: #ff6363;
-        margin-right: 10px;
+        color: #0f100f;
+        margin-right: 12px;
+        margin-left: 0px;
       }
     }
   }
   
   .login-link {
+    font-weight: 600;
     text-decoration: none;
-    color: #ff6363;
-  
+    color: #025c08;
+
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .feildheading{
+    font-weight: 350;
+    color: #213901;
   }
   

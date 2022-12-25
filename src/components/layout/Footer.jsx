@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <>
       <section className="footer">
-        <div className="footer-about">
-          <div className="footer-about__logo logo">
+        {/* <div className="footer-about"> */}
+        {/* <div className="footer-about__logo logo">
             <img src={footer_logo} alt="logo" className="header__logo--img" />
           </div>
           <div className="footer-about__text">
@@ -49,9 +49,10 @@ const Footer = () => {
           <div className="newsletter__socials">
             <FaFacebookSquare /> <FaTwitterSquare /> <FaInstagram />
           </div>
-        </div>
+        </div> */}
         <div className="footer__copyright">
-          &copy; 2022 All rights reserved. Rent N' Read
+          &copy; Copyright 2022 Thrift It.&nbsp;|&nbsp; All Rights Reserved
+          &nbsp;|&nbsp; Design by Aaron Man Thaku
         </div>
       </section>
     </>
