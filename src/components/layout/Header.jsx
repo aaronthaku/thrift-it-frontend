@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import logo from "../../assets/thritit-logo.png";
+import { useState, useEffect } from "react";
+import logo from "../../assets/thriftit-logo.png";
 import "./header.scss";
+import AccountMenu from "./profile_dropdown";
+
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuClickHandler = (e) => {
@@ -10,20 +12,20 @@ const Header = () => {
     setOpenMenu((p) => !p);
   };
   const logout = () => {
-    localStorage.clear();
-    window.location.replace("/login");
+    if (localStorage.getItem("googlelogin")) {
+      localStorage.clear();
+      window.open("http://localhost:90/thirdpartyRouter/logout", "_self");
+    } else {
+      localStorage.clear();
+      window.location.replace("/login");
+    }
   };
+
   return (
     <div className="header">
       <Link to="/">
         <div className="header__logo">
-          <img
-            src={logo}
-            alt="logo"
-            // width="200"
-            // height="150"
-            className="header__logo--img"
-          />
+          <img src={logo} alt="logo" className="header__logo--img" />
         </div>
       </Link>
       <div
@@ -38,16 +40,24 @@ const Header = () => {
         <Link to="/" className="nav__links ">
           Home
         </Link>
-        <Link className="nav__links" to="/books">
+        <Link className="nav__links" to="">
           Products
         </Link>
-        <Link className="nav__links">Cart</Link>
+        <Link className="nav__links" to="">
+          Cart
+        </Link>
         <Link className="nav__links">About</Link>
         {localStorage.getItem("token") ? (
-          <Link className="nav__btn nav__links" to="login" onClick={logout}>
-            Log out
-          </Link>
+          <>
+            <Link className="nav__btn nav__links" to="">
+              Post Product Free
+            </Link>
+            <AccountMenu></AccountMenu>
+          </>
         ) : (
+          // <Link className="nav__btn nav__links" to="login" onClick={logout}>
+          //   Log out
+          // </Link>
           <Link className="nav__btn nav__links" to="login">
             Login
           </Link>

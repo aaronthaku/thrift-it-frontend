@@ -29,12 +29,21 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
-  const [showPassword, setShowPassword] = React.useState(false);
+  // const [showPassword, setShowPassword] = React.useState(false);
 
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
+  // const handleClickShowPassword = () => setShowPassword((show) => !show);
+  // const handleMouseDownPassword = (event) => {
+  //   event.preventDefault();
+  // };
+
+  // google login
+  const googleAuth = () => {
+    window.open(
+      "http://localhost:90/thirdpartyRouter/google/callback",
+      "_self"
+    );
   };
+
   const login = (e) => {
     e.preventDefault();
 
@@ -176,7 +185,7 @@ const Login = () => {
             </Link>
           </p>
         </form>
-        {/* <hr
+        <hr
           style={{
             height: 0.5,
             borderWidth: 0,
@@ -184,8 +193,8 @@ const Login = () => {
             backgroundColor: "gray",
           }}
         />
-        <br /> */}
-        {/* <button className="login__google">
+        <br />
+        <button className="login__google" onClick={googleAuth}>
           <FcGoogle className="login__google--icon" size={30} />
           Continue with Google
         </button>
@@ -193,7 +202,7 @@ const Login = () => {
         <button className="login__google">
           <FaFacebookSquare className="login__google--icon" size={30} />
           Continue with Facebook
-        </button> */}
+        </button>
       </div>
     </div>
   );

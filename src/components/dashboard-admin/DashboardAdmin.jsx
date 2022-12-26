@@ -25,7 +25,7 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import PlayLessonIcon from "@mui/icons-material/PlayLesson";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { Link, Outlet } from "react-router-dom";
-import logo from "../../assets/thritit-logo.png";
+import logo from "../../assets/thriftit-logo.png";
 import "./DashboardAdmin.scss";
 import Avatar from "@mui/material/Avatar";
 import { useEffect, useState } from "react";

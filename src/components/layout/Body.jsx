@@ -5,12 +5,14 @@ import Login from "../login/Login";
 import Register from "../register/Register";
 import DashboardAdmin from "../dashboard-admin/DashboardAdmin";
 import DashboardHome from "../dashboard-admin/DashboardHome";
+import Loginsuccess from "../../pages/Loginsucess";
 
 const Body = () => {
   return (
     <>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/loginsuccess" element={<Loginsuccess />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard_admin" element={<DashboardAdmin />}>
