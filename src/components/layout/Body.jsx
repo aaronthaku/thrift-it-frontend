@@ -6,6 +6,7 @@ import Register from "../register/Register";
 import DashboardAdmin from "../dashboard-admin/DashboardAdmin";
 import DashboardHome from "../dashboard-admin/DashboardHome";
 import Loginsuccess from "../../pages/Loginsucess";
+import ForgetPasswordEmail from "../../pages/ForgetPasswordEmail";
 
 const Body = () => {
   return (
@@ -15,6 +16,8 @@ const Body = () => {
         <Route path="/loginsuccess" element={<Loginsuccess />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgetpassword" element={<ForgetPasswordEmail />} />
+
         <Route path="/dashboard_admin" element={<DashboardAdmin />}>
           <Route path="" element={<DashboardHome />} />
         </Route>

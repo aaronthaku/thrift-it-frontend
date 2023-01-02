@@ -109,6 +109,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: 15px;
       width: 100%;
       padding: 15px;
       font-weight: 450;
@@ -142,6 +143,21 @@
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  .forget-link {
+    // margin-top: 5px;
+    margin-bottom: 25px;
+    text-align: end;
+    text-decoration: none;
+    color: #b80505;
+    @media (max-width: 440px) {
+      font-size: 14px;
+    }
+  
+    &:hover {
+      text-decoration: none;
     }
   }
 

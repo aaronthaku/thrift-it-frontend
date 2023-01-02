@@ -169,6 +169,11 @@ const Login = () => {
               ""
             )}
           </div>
+          <div className="forget-link">
+            <Link to="/forgetpassword" className="forget-link">
+              Forgot password ?
+            </Link>
+          </div>
 
           <button
             type="submit"
@@ -199,10 +204,10 @@ const Login = () => {
           Continue with Google
         </button>
         <br />
-        <button className="login__google">
+        {/* <button className="login__google">
           <FaFacebookSquare className="login__google--icon" size={30} />
           Continue with Facebook
-        </button>
+        </button> */}
       </div>
     </div>
   );

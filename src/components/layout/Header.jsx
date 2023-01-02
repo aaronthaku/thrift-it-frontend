@@ -1,11 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Modal from "@mui/material/Modal";
 import logo from "../../assets/thriftit-logo.png";
+import Box from "@mui/material/Box";
 import "./header.scss";
 import AccountMenu from "./profile_dropdown";
+import AddProduct from "../add_product/AddProduct";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: "70%",
+  bgcolor: "background.paper",
+  borderRadius: "10px",
+  boxShadow: 24,
+  p: 4,
+};
 
 const Header = () => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   const [openMenu, setOpenMenu] = useState(false);
   const menuClickHandler = (e) => {
     e.preventDefault();
@@ -49,9 +68,9 @@ const Header = () => {
         <Link className="nav__links">About</Link>
         {localStorage.getItem("token") ? (
           <>
-            <Link className="nav__btn nav__links" to="">
+            <button className="nav__btn nav__links" onClick={handleOpen}>
               Post Product Free
-            </Link>
+            </button>
             <AccountMenu></AccountMenu>
           </>
         ) : (
@@ -63,6 +82,17 @@ const Header = () => {
           </Link>
         )}
       </nav>
+
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <AddProduct></AddProduct>
+        </Box>
+      </Modal>
     </div>
   );
 };
