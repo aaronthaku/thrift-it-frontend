@@ -1,0 +1,208 @@
+.book-card {
+    background: #f8f8f8;
+    padding: 18px;
+    display: flex;
+    position: relative;
+    margin-left: 220px;
+    margin-right: 220px;
+    margin-bottom: 35px;
+    @media (max-width: 550px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    &__img {
+      max-width: 245px;
+      max-height: 195px;
+      object-fit: cover;
+      margin-top: 60px;
+      margin-left: 10px;
+      margin-right: 30px;
+      @media (max-width: 550px) {
+        margin-right: 0px;
+        margin-bottom: 20px;
+      }
+    }
+    &__delete {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 20px;
+      cursor: pointer;
+      color: rgb(246, 95, 95);
+      &:hover {
+        color: rgb(203, 26, 26);
+      }
+    }
+  }
+  
+  .book-details {
+    padding: 15px;
+    flex: 1;
+    &__title {
+      font-weight: 700;
+      font-size: 22px;
+  
+      color: #783a0d;
+      @media (max-width: 380px) {
+        font-size: 18px;
+      }
+    }
+    &__author {
+      font-weight: 600;
+      font-size: 18px;
+  
+      color: #5b635d;
+      margin-bottom: 10px;
+      @media (max-width: 380px) {
+        font-size: 14px;
+      }
+    }
+    &__desc {
+      font-family: "Alata";
+      font-size: 18px;
+      max-width: 625px;
+      margin-bottom: 10px;
+      @media (max-width: 380px) {
+        font-size: 14px;
+      }
+    }
+    &__cost {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 8px;
+      @media (max-width: 380px) {
+        font-size: 14px;
+      }
+      &--amount {
+        color: #0dcd2c;
+        font-size: 18px;
+        @media (max-width: 380px) {
+          font-size: 16px;
+        }
+      }
+    }
+    &__update {
+      display: flex;
+      justify-content: start;
+      &--btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 10px;
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #64a36e;
+        border-radius: 6px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        svg {
+          margin-left: 5px;
+        }
+        &:hover {
+          background: #447c4d;
+        }
+      }
+    }
+    &__delete {
+      display: flex;
+      justify-content: start;
+      &--btn {
+        display: flex;
+        align-items: center;
+        padding: 8px 10px;
+        margin-top: 15px;
+        margin-left: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        background: #ab1a26;
+        border-radius: 6px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+        svg {
+          margin-left: 5px;
+        }
+        &:hover {
+          background: #680303;
+        }
+      }
+    }   
+  }
+
+  .approve--btn {
+    margin-right: 8px;
+    width:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #269639;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    svg {
+      margin-left: 5px;
+      font-size: 10px;
+    }
+    &:hover {
+      background: #005f10;
+    }
+  }
+    .reject--btn {
+      display: flex;
+      width:100px;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      background: #c02d2d;
+      border-radius: 10px;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      svg {
+        margin-left: 5px;
+        font-size: 10px;
+      }
+      &:hover {
+        background: #a70c0c;
+      }
+    }
+
+    .tabs {
+      background: #f8f8f8;
+      display: flex;
+      padding: 0 20px;
+      margin-bottom: 20px;
+      border-top: 3px solid #f8f8f8;
+      &__tab {
+        padding: 20px 0;
+        // margin-top: 20px;
+        margin-left: 210px;
+        margin-right: 20px;
+        border-bottom: 3px solid #f8f8f8;
+        font-weight: 600;
+        font-size: 16px;
+        color: #8e8e8e;
+    
+        cursor: pointer;
+        &:hover {
+          border-color: #3c8b3d;
+        }
+        &--open {
+          border-color: #0b6c28;
+        }
+      }
+    }
+    
+  

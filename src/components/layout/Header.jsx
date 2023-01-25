@@ -59,13 +59,15 @@ const Header = () => {
         <Link to="/" className="nav__links ">
           Home
         </Link>
-        <Link className="nav__links" to="">
+        <Link className="nav__links" to="/products">
           Products
         </Link>
-        <Link className="nav__links" to="">
+        <Link className="nav__links" to="/wishlist">
           Cart
         </Link>
-        <Link className="nav__links">About</Link>
+        <Link className="nav__links" to="/aboutus">
+          About
+        </Link>
         {localStorage.getItem("token") ? (
           <>
             <button className="nav__btn nav__links" onClick={handleOpen}>

@@ -59,6 +59,7 @@ const AddProduct = () => {
   const [rich_desc, setRich_desc] = useState("");
   const [desc, setDesc] = useState("");
   const [author, setAuthor] = useState("");
+  const [product_price, setProductPrice] = useState("");
   const [product_img, setProduct_img] = useState("");
 
   const addProduct = (e) => {
@@ -67,6 +68,7 @@ const AddProduct = () => {
       name === "" ||
       rich_desc === "" ||
       author === "" ||
+      product_price === "" ||
       product_img === "" ||
       desc === ""
     ) {
@@ -83,6 +85,7 @@ const AddProduct = () => {
     data.append("rich_desc", rich_desc);
     data.append("desc", desc);
     data.append("author", author);
+    data.append("product_price", product_price);
     data.append("product_img", product_img);
     console.log(data);
 
@@ -221,6 +224,15 @@ const AddProduct = () => {
             }}
             onChange={(e) => {
               setProduct_img(e.target.files[0]);
+            }}
+          />
+          <TextField
+            required
+            fullWidth
+            id="outlined-required outlined-multiline-static"
+            label="Product Price"
+            onChange={(e) => {
+              setProductPrice(e.target.value);
             }}
           />
           <Button

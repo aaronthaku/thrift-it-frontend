@@ -77,9 +77,9 @@ function DashboardAdmin(props) {
         <Link to="/dashboard_admin" className="admin-dashboard__nav">
           <ListItem disablePadding>
             <ListItemButton>
-              <ListItemIcon>
+              {/* <ListItemIcon>
                 <WidgetsIcon fontSize="large" />
-              </ListItemIcon>
+              </ListItemIcon> */}
               <ListItemText
                 disableTypography
                 primary={"Admin Board"}
@@ -93,7 +93,7 @@ function DashboardAdmin(props) {
         </Link>
       </List>
       <Divider />
-      <p className="admin-dashboard__nav--heading">Management</p>
+      {/* <p className="admin-dashboard__nav--heading">Management</p> */}
       <List>
         <Link className="admin-dashboard__nav">
           <ListItem disablePadding>

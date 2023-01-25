@@ -73,7 +73,7 @@ const Login = () => {
             window.location.replace("/dashboard_admin");
           } else {
             console.log(res.data);
-            window.location.replace("/dashboard");
+            window.location.replace("/");
           }
         } else {
           toast.error("User Not Logged In", {

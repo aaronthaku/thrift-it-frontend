@@ -59,7 +59,7 @@ const DashboardHome = () => {
           />
           <DashboardCard
             heading="sales"
-            icon={sales}
+            // icon={sales}
             count={500}
             link={"/sales"}
           />
@@ -69,7 +69,7 @@ const DashboardHome = () => {
             heading="Category"
             icon={category}
             count={18}
-            link={"/sales"}
+            // link={"/sales"}
           />
           <DashboardCard
             heading="Profile"
@@ -125,9 +125,9 @@ const DashboardCard = ({ heading, icon, count, link }) => {
     <div className="dash-card">
       <div className="dash-card__heading">
         <span className="dash-card__heading--text">{heading}</span>
-        <Link to={link}>
+        {/* <Link to={link}>
           <AiFillRightCircle className="dash-card__heading--icon" />
-        </Link>
+        </Link> */}
       </div>
       <div className="dash-card__icon">
         <img src={icon} alt={heading} />

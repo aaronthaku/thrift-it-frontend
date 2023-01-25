@@ -1,0 +1,115 @@
+.listed-card {
+    background: linear-gradient(to bottom, #c2c2c2 5%, #ffffff 80%);
+    position: relative;
+  }
+
+  
+  .featuredland{
+    position:static;
+    margin-left:15px;
+    margin-top:12px;
+  }
+//   .propertycards{
+//     // justify-content: space-around;
+//     width: 260px;
+//   }
+  
+  .top-left {
+    position: absolute;
+    color:white;
+    height: 18px;
+    width: 55px;
+    font-size:10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: red;
+    top: 25px;
+    left: 25px;
+  }
+  
+  .top-right {
+    position: absolute;
+    color:white;
+    height: 18px;
+    width: 48px;
+    font-size:10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: green;
+    top: 25px;
+    left: 180px;
+  }
+  
+  .card {
+    background-color: #f2f5f9;
+    position: relative;
+    border-radius: 30px;
+    /* line-height: 16px; */
+    /* text-align: center; */
+    /* color: white; */
+  }
+  .card-img{
+    border-radius: 30px;
+  }
+  
+  .card-body {
+      line-height: 10px;
+    }
+
+
+    .listed-card {
+        background: linear-gradient(to bottom, #c2c2c2 5%, #ffffff 80%);
+        position: relative;
+      }
+      .book-Name {
+        font-weight: 600;
+        font-size: 14px;
+        color: #783a0d;
+        overflow-wrap: break-word;
+        text-transform: capitalize;
+      }
+      .book-img {
+        max-width: 130px;
+        height: 190px;
+        object-fit: cover;
+      }
+      
+      .book-Author {
+        font-weight: 500;
+        font-size: 14px;
+        color: #838684;
+        overflow-wrap: break-word;
+      }
+      
+      .bookcost,
+      .bookday {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .bookcost {
+        color: #0dcd2c;
+      }
+      .bookday {
+        color: #838684;
+      }
+      
+      .rent-btn {
+        background-color: #177d18;
+        padding: 4px;
+        margin: 2px;
+      }
+      .rent-icon {
+        color: #ffffff;
+        font-size: 20px;
+      }
+      
+      .rent-btn:hover {
+        background-color: #105706;
+      }
+      
+      .rent-btn {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+      

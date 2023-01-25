@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Avatar from "@mui/material/Avatar";
+import DashboardIcon from "@mui/icons-material/Dashboard";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -10,6 +11,7 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import PersonAdd from "@mui/icons-material/PersonAdd";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import { Link } from "react-router-dom";
@@ -52,7 +54,7 @@ export default function AccountMenu() {
   return (
     <React.Fragment>
       <Box sx={{ display: "flex", alignItems: "center", textAlign: "center" }}>
-        <Tooltip title="Account settings">
+        <Tooltip title={userDetails.username}>
           <IconButton
             onClick={handleClick}
             size="small"
@@ -63,7 +65,7 @@ export default function AccountMenu() {
           >
             <Avatar
               sx={{ width: 42, height: 42 }}
-              // src={`http://localhost:90/${userDetails.profile_pic}`}
+              src={`http://localhost:90/${userDetails.profile_pic}`}
             ></Avatar>
           </IconButton>
         </Tooltip>
@@ -103,34 +105,31 @@ export default function AccountMenu() {
         transformOrigin={{ horizontal: "right", vertical: "top" }}
         anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
       >
-        <Link
-          className="text-decoration-none text-dark"
-          to="dashboard/Profilepage"
-        >
+        <Link className="text-decoration-none text-dark" to="/profilepage">
           <MenuItem>
-            <Avatar /> Profile
+            <ListItemIcon>
+              <AccountCircleIcon fontSize="small" />
+            </ListItemIcon>{" "}
+            Profile
           </MenuItem>
         </Link>
-        <Link className="text-decoration-none text-dark" to="/dashboard">
+        <Link className="text-decoration-none text-dark" to="/myproducts">
           <MenuItem>
-            <Avatar /> Dashboard
+            <ListItemIcon>
+              <AccountCircleIcon fontSize="small" />
+            </ListItemIcon>{" "}
+            My Products
           </MenuItem>
         </Link>
         <Divider />
-        {/* <MenuItem>
-          <ListItemIcon>
-            <PersonAdd fontSize="small" />
-          </ListItemIcon>
-          Add another account
-        </MenuItem> */}
-        <Link className="text-decoration-none text-dark" to="dashboard/setting">
+        {/* <Link className="text-decoration-none text-dark" to="dashboard/setting">
           <MenuItem>
             <ListItemIcon>
               <Settings fontSize="small" />
             </ListItemIcon>
             Settings
           </MenuItem>
-        </Link>
+        </Link> */}
         <MenuItem onClick={logout}>
           <ListItemIcon>
             <Logout fontSize="small" />

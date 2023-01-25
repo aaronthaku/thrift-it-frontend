@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React App</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<style>
+    .text-white{
+        color:white
+    }
+    .pharmacy-main{
+      max-width: 1490px;
+      margin-top: 80px;
+}
+    .search-section {
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      margin-bottom: 80px;
+}
+    .search-dept {
+      position: relative;
+       justify-content: center;
+      display: flex;
+      width: 591px;
+      position: relative;
+    }
+    .search-dept-input {
+      padding: 12px 20px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      border: none;
+      outline: none;
+
+      background: linear-gradient(
+          0deg,
+          rgba(243, 241, 241, 0.1),
+          rgba(243, 241, 241, 0.1)
+        ),
+        rgba(243, 241, 241, 0.67);
+      border-radius: 12px;
+      &::placeholder {
+        color: #969696;
+        @media (max-width: 900px) {
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 900px) {
+        font-weight: 600;
+        font-size: 16px;
+      }
+    }
+    .search-dept-input::placeholder {
+      color: #a7a3a3;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .search-box-icon {
+      color: #a7a3a3;
+      position: absolute;
+      right: 35px;
+      top: 25px;
+      z-index: 2;
+      transform: scale(1.5);
+      transition: all 0.4s;
+    }
+    .search-box-icon:hover {
+      color: #476298;
+      cursor: pointer;
+      transform: scale(1.8);
+    }
+    .recommend-title{
+    padding: 0px 50px 20px 95px;
+    position: relative;
+<!--      display: inline-block;-->
+    }
+
+    .form{
+        display:flex;
+        margin-left:250px;
+        margin-top: 80px;
+    }
+    .card{
+        width: 25rem;
+
+    }
+
+<!--    Card CSS-->
+
+ .top-left {
+    position: absolute;
+    color:white;
+    height: 18px;
+    width: 55px;
+    font-size:10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: red;
+    top: 25px;
+    left: 25px;
+  }
+
+  .top-right {
+    position: absolute;
+    color:white;
+    height: 16px;
+    width: 48px;
+    font-size:10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: green;
+    top: 20px;
+    left: 170px;
+  }
+
+  .card {
+    background-color: #f2f5f9;
+    position: relative;
+    border-radius: 30px;
+  }
+  .card-img{
+    border-radius: 30px;
+    width:100%;
+    height: 170px;
+    margin-top: 10px;
+
+  }
+
+  .card-body {
+      line-height: 10px;
+      padding:10px;
+    }
+
+
+    .listed-card {
+        background: linear-gradient(to bottom, #c2c2c2 5%, #ffffff 80%);
+        position: relative;
+      }
+      .book-Name {
+        font-weight: 600;
+        font-size: 14px;
+        color: #783a0d;
+        overflow-wrap: break-word;
+        text-transform: capitalize;
+        margin-top:10px;
+      }
+
+      .book-Author {
+        font-weight: 500;
+        font-size: 14px;
+        color: #838684;
+        overflow-wrap: break-word;
+      }
+
+      .bookcost,
+      .bookday {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .bookcost {
+        color: #0dcd2c;
+      }
+      .bookday {
+        color: #838684;
+      }
+     .product-card {
+       display: flex;
+       margin-right: 0px;
+       margin-left:100px
+       }
+
+</style>
+<body>
+
+<!--    <nav class="navbar" style="background-color:#00a65a">-->
+<!--        <a class="navbar-brand">My Product recommender</a>-->
+<!--        <ul class="nav navbar-nav">-->
+<!--            <li><a href="/">Home</a></li>-->
+<!--            <li><a href="/recommend">Recommend</a></li>-->
+<!--            <li><a>Contact</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
+
+    <section class="pharmacy-main container-fluid" style="margin:50px">
+        <div class="row">
+            <div class="search-section">
+<!--                <h1 class="m-5" style="font-size:30px">Recommend Products</h1>-->
+                <form class= "form" action="/recommend_books" method="post">
+                    <input name="user_input" type="text" class="search-dept-input font-default" placeholder="Enter Product Name..."><i class="fas fa-search search-box-icon"></i>
+                    <br>
+                    <input type="submit" class="btn btn-lg btn-warning">
+
+                </form>
+            </div>
+<h1 class="recommend-title" style="font-size:30px">Recommended Products</h1>
+            {% if data %}
+
+             {% for i in data %}
+
+<!--                <div class="col-md-3" style="margin-top:50px">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-body">-->
+<!--                            <img class="card-img-top" src="{{i[2]}}" height="100" width="100">-->
+<!--                            <p class="">{{i[0]}}</p>-->
+<!--                            <h4 class="">Owner: {{i[1]}}</h4>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+
+         <div class="product-card col-md-3 justify-content-center" style="margin-top:50px" >
+            <div class="card col-md-3">
+              <img class="card-img mt-3"
+                src="{{i[2]}}"  >
+
+<!--              <div class="top-left">&nbsp;For Sale</div>-->
+              <div class="top-right">&nbsp;Used</div>
+              <div class="card-body p-2">
+                <p class="book-Name my-1">{{i[0]}}</p>
+                <h5 class="book-Author my-2">Owner: {{i[1]}}</h5>
+                <div class="d-flex justify-content-between mt-2">
+                  <div class="d-flex flex-nowrap">
+                    <p class="bookcost">Rs. 1000</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+             {% endfor %}
+
+            {% endif %}
+        </div>
+    </section>
+
+</body>
+</html>
